@@ -1,18 +1,8 @@
-import { GetServerSideProps } from 'next';
+import { Home } from '@components/Standalone/Home';
 import React from 'react';
 
 function index() {
-    return <div>index</div>;
+    return <Home />;
 }
 
 export default index;
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    return {
-        redirect: {
-            permanent: false,
-            destination: '/login',
-        },
-        props: {},
-    };
-};

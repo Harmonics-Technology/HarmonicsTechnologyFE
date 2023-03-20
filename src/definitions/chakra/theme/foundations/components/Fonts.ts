@@ -1,8 +1,8 @@
 import type { DeepPartial, Theme } from '@chakra-ui/react';
 
 const fonts: DeepPartial<Theme['fonts']> = {
-    body: "'Rubik', sans-serif",
-    heading: "'Rubik', sans-serif",
+    body: "'DM Sans', sans-serif",
+    heading: "'BR Firma', sans-serif",
 };
 
 export default fonts;

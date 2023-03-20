@@ -37,11 +37,15 @@ function MyApp({
                     content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
                 />
                 <title>Harmonics Technology</title>
-                <link rel="icon" href="/assets/logo.png" type="image/x-icon" />
+                <link
+                    rel="icon"
+                    href="/assets/logofav.png"
+                    type="image/x-icon"
+                />
             </Head>
             <QueryClientProvider client={queryClient}>
                 <Hydrate state={pageProps.dehydratedState}>
-                    <NextNProgress color="#2EAFA3" />
+                    <NextNProgress color="#A03CAE" />
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>
