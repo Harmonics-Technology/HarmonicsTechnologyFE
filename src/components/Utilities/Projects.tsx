@@ -2,15 +2,17 @@ import { Box, Button } from '@chakra-ui/react';
 import React from 'react';
 import { PageTop } from './PageTop';
 import { ProjectItem } from './ProjectItem';
+import { useRouter } from 'next/router';
 
 export const Projects = () => {
+    const router = useRouter();
     return (
         <Box w="full">
             <PageTop
                 sub="Our WORKS"
                 title="Some Of Our  Projects"
                 mx="auto"
-                w="full"
+                // w="full"
                 desc="Crafted with passion and precision, our work is a testament to our commitment to excellence."
                 bg="#EFE9FC"
             />
@@ -24,18 +26,18 @@ export const Projects = () => {
             <ProjectItem
                 title="Property Mattaz"
                 desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
-                project="https://studiomart.com"
+                project="https://propertymattaz.com"
                 cat={['Mobile', 'Web', 'Development']}
                 img="/assets/98.png"
             />
             <ProjectItem
                 title="Liquede"
                 desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
-                project="https://studiomart.com"
+                project="https://liquede.com"
                 cat={['Mobile', 'Web', 'Development', 'Product Design']}
                 img="/assets/99.png"
             />
-            <Box w="fit-content" mx="auto">
+            <Box w="fit-content" mx="auto" mt="-4rem">
                 <Button
                     variant="outline"
                     borderColor="brand.100"
@@ -46,6 +48,7 @@ export const Projects = () => {
                     mb="2rem"
                     borderRadius="4px"
                     h="3rem"
+                    onClick={() => router.push('/our-works')}
                     _hover={{
                         bgColor: 'brand.100',
                         color: 'white',

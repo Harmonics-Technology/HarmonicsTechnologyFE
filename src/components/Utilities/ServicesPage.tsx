@@ -3,15 +3,17 @@ import { PageTop } from './PageTop';
 import { ServiceItem } from './ServiceItem';
 import { Box, VStack } from '@chakra-ui/react';
 
-export const ServicesPage = () => {
+export const ServicesPage = ({ page }: { page?: boolean }) => {
     return (
         <Box mt="2rem">
-            <PageTop
-                sub="Our Services"
-                title="Here are what we do best"
-                mx="auto"
-                desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
-            />
+            {!page && (
+                <PageTop
+                    sub="Our Services"
+                    title="Here are what we do best"
+                    mx="auto"
+                    desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
+                />
+            )}
             <VStack w="80%" mx="auto" mb="5rem">
                 <ServiceItem
                     title="Product Design"
@@ -19,6 +21,7 @@ export const ServicesPage = () => {
                     btn="Work with us"
                     dir="ltr"
                     img="/assets/product.png"
+                    url={'/services/product'}
                 />
                 <ServiceItem
                     title="Software Development"
@@ -26,6 +29,7 @@ export const ServicesPage = () => {
                     btn="Work with us"
                     dir="rtl"
                     img="/assets/graphics.png"
+                    url={'/services/software'}
                 />
                 <ServiceItem
                     title="Graphics  Design"
@@ -33,6 +37,7 @@ export const ServicesPage = () => {
                     btn="Work with us"
                     dir="ltr"
                     img="/assets/software.png"
+                    url={'/services/graphics'}
                 />
             </VStack>
         </Box>

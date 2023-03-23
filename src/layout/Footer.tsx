@@ -49,26 +49,44 @@ function Footer() {
                     <Grid w="full" templateColumns={['repeat(3,1fr)']}>
                         <VStack spacing="0" gap="1rem" align="flex-start">
                             <FooterHeadings text="IT Services" />
-                            <FooterMenuItems text="Graphics Design" url="/" />
-                            <FooterMenuItems text="Product Design" url="/" />
-                            <FooterMenuItems text="Web Development" url="/" />
+                            <FooterMenuItems
+                                text="Graphics Design"
+                                url="/services/graphics"
+                            />
+                            <FooterMenuItems
+                                text="Product Design"
+                                url="/services/product"
+                            />
+                            <FooterMenuItems
+                                text="Web Development"
+                                url="/services/software"
+                            />
                         </VStack>
                         <VStack spacing="0" gap="1rem" align="flex-start">
                             <FooterHeadings text="Company" />
-                            <FooterMenuItems text="About Us" url="/" />
-                            <FooterMenuItems text="Our Services" url="/" />
-                            <FooterMenuItems text="FAQs" url="/" />
-                            <FooterMenuItems text="Read from us" url="/" />
+                            <FooterMenuItems text="About Us" url="/about" />
+                            <FooterMenuItems
+                                text="Our Services"
+                                url="/services"
+                            />
+                            <FooterMenuItems text="FAQs" url="/contact" />
+                            <FooterMenuItems text="Read from us" url="/blog" />
                         </VStack>
                         <VStack spacing="0" gap="1rem" align="flex-start">
                             <FooterHeadings text="Contact" />
-                            <FooterMenuItems
-                                text="+2348180041801 or +2348162812758"
-                                url="/"
-                            />
+                            <Flex>
+                                <FooterMenuItems
+                                    text="+2348180041801 or"
+                                    url="tel:+2348180041801"
+                                />
+                                <FooterMenuItems
+                                    text="+2348162812758"
+                                    url="tel:+2348162812758"
+                                />
+                            </Flex>
                             <FooterMenuItems
                                 text="info@harmonicstechnology.com"
-                                url="/"
+                                url="mailto:info@harmonicstechnology.com"
                             />
                             <FooterMenuItems
                                 text="Opening Hours: 9:00AM - 5:00AM"
@@ -95,11 +113,26 @@ function Footer() {
                     <FooterMenuItems text="Terms and Condition" url="/" />
                     <FooterMenuItems text="Cookies Policy" url="/" />
                     <FooterMenuItems text="Privacy Policy" url="/" />
-                    <Socials icon={AiOutlineInstagram} url="/" />
-                    <Socials icon={AiFillLinkedin} url="" />
-                    <Socials icon={FaFacebook} url="" />
-                    <Socials icon={AiOutlineTwitter} url="" />
-                    <Socials icon={AiFillYoutube} url="" />
+                    <Socials
+                        icon={AiOutlineInstagram}
+                        url="https://www.instagram.com/harmonicstechnology/"
+                    />
+                    <Socials
+                        icon={AiFillLinkedin}
+                        url="https://www.linkedin.com/harmonicstechnology/"
+                    />
+                    <Socials
+                        icon={FaFacebook}
+                        url="https://www.facebook.com/harmonicstechnology/"
+                    />
+                    <Socials
+                        icon={AiOutlineTwitter}
+                        url="https://www.twitter.com/harmonicstechnology/"
+                    />
+                    <Socials
+                        icon={AiFillYoutube}
+                        url="https://www.youtube.com/harmonicstechnology/"
+                    />
                 </HStack>
             </Flex>
         </Box>

@@ -1,21 +1,25 @@
-import { Box } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import { Box, Icon } from '@chakra-ui/react';
 import React, { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import ScrollToTop from 'react-scroll-to-top';
+import { RxCaretUp } from 'react-icons/rx';
 
 type LayoutProps = {
     children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
-    const router = useRouter();
-
     return (
         <>
             <Header />
             <Box>{children}</Box>
             <Footer />
+            <ScrollToTop
+                smooth
+                component={<Icon as={RxCaretUp} fontSize="1.5rem" />}
+                className="scrollToTop"
+            />
         </>
     );
 };

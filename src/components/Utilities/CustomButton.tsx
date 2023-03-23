@@ -1,4 +1,4 @@
-import { Button, Icon, Image } from '@chakra-ui/react';
+import { Button, Image } from '@chakra-ui/react';
 import React from 'react';
 
 interface customBtnProps {
@@ -7,6 +7,8 @@ interface customBtnProps {
     text: string;
     icon?: any;
     img?: any;
+    variant?: any;
+    onClick?: any;
 }
 
 export const CustomButton = ({
@@ -15,6 +17,8 @@ export const CustomButton = ({
     text,
     icon,
     img,
+    variant,
+    onClick,
 }: customBtnProps) => {
     return (
         <Button
@@ -22,8 +26,11 @@ export const CustomButton = ({
             color={color}
             fontSize="14px"
             borderRadius="8px"
+            borderColor={variant ? color : 'none'}
             h="3.1rem"
             px="1.5rem"
+            variant={variant}
+            onClick={onClick}
             _hover={{
                 bgColor: 'brand.500',
             }}

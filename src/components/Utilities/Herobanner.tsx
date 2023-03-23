@@ -10,7 +10,8 @@ import {
 import React from 'react';
 import { CustomButton } from './CustomButton';
 import { FiArrowUpRight } from 'react-icons/fi';
-import { FaAirFreshener } from 'react-icons/fa';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import 'animate.css/animate.min.css';
 
 export const Herobanner = () => {
     return (
@@ -26,21 +27,29 @@ export const Herobanner = () => {
                 mx="auto"
                 pos="relative"
             >
-                <Image
-                    src="/assets/squares.png"
-                    pos="absolute"
-                    left="2%"
-                    top="0"
-                />
+                <Box pos="absolute" left="2%" top="0">
+                    <AnimationOnScroll
+                        animateIn="animate__fadeInDown"
+                        delay={100}
+                    >
+                        <Image src="/assets/squares.png" />
+                    </AnimationOnScroll>
+                </Box>
                 <Box pos="absolute" right="7%" bottom="40%">
-                    <Image src="/assets/stara.png" pos="relative" />
-                    <Image
-                        src="/assets/staras.png"
-                        pos="absolute"
-                        left="50%"
-                        top="50%"
-                        transform="translate(-50%,-50%)"
-                    />
+                    <AnimationOnScroll
+                        animateIn="animate__pulse"
+                        delay={150}
+                        duration={3}
+                    >
+                        <Image src="/assets/stara.png" pos="relative" />
+                        <Image
+                            src="/assets/staras.png"
+                            pos="absolute"
+                            left="50%"
+                            top="50%"
+                            transform="translate(-50%,-50%)"
+                        />
+                    </AnimationOnScroll>
                 </Box>
                 <HStack
                     borderRadius="20px"
@@ -70,38 +79,72 @@ export const Herobanner = () => {
                     lineHeight="103px"
                     zIndex="2"
                 >
-                    We Create <br />
-                    World-class
-                    <br />
-                    Products
-                </Heading>
-                <Box
-                    h="47px"
-                    bgColor="brand.100"
-                    w="49%"
-                    left="50%"
-                    transform="translateX(-49%)"
-                    pos="absolute"
-                    top="212px"
-                    zIndex="1"
-                />
-                <Box w="50%" mt="3rem">
-                    <Text
-                        fontFamily="Nunito"
-                        fontSize="24px"
-                        letterSpacing="-0.02em"
-                        color="rgba(26, 26, 26, 0.72)"
-                        textAlign="center"
+                    <AnimationOnScroll animateIn="animate__fadeInUp">
+                        We Create
+                    </AnimationOnScroll>
+                    <AnimationOnScroll
+                        animateIn="animate__fadeInUp"
+                        duration={2}
                     >
-                        Harmonics Technology designs thoughtful user interfaces
-                        and builds inventive applications that are tailored to
-                        our clients' unique requirements.
-                    </Text>
+                        World-class
+                    </AnimationOnScroll>
+                    <AnimationOnScroll
+                        animateIn="animate__fadeInUp"
+                        duration={3}
+                    >
+                        Products
+                    </AnimationOnScroll>
+                </Heading>
+                <AnimationOnScroll
+                    animateIn="animate__fadeInUp"
+                    duration={2}
+                    style={{
+                        position: 'absolute',
+                        top: '212px',
+                        left: '26%',
+                        transform: 'translateX(-49%)',
+                        width: '49%',
+                    }}
+                >
+                    <Box
+                        h="47px"
+                        bgColor="brand.100"
+                        // w="49%"
+                        // left="50%"
+                        // transform="translateX(-49%)"
+                        // pos="absolute"
+                        // top="212px"
+                        zIndex="1"
+                    />
+                </AnimationOnScroll>
+                <Box w="50%" mt="3rem">
+                    <AnimationOnScroll
+                        animateIn="animate__fadeInUp"
+                        delay={100}
+                    >
+                        <Text
+                            fontFamily="Nunito"
+                            fontSize="24px"
+                            letterSpacing="-0.02em"
+                            color="rgba(26, 26, 26, 0.72)"
+                            textAlign="center"
+                        >
+                            Harmonics Technology designs thoughtful user
+                            interfaces and builds inventive applications that
+                            are tailored to our clients' unique requirements.
+                        </Text>
+                    </AnimationOnScroll>
                     <HStack spacing="0" gap="24px" justify="center">
                         <CustomButton
                             text="Discover Our Offers"
                             bg="brand.100"
-                            icon={<FiArrowUpRight />}
+                            icon={
+                                <Icon
+                                    as={FiArrowUpRight}
+                                    ml=".8rem"
+                                    fontSize="1rem"
+                                />
+                            }
                         />
                         <CustomButton text="Learn More" />
                     </HStack>

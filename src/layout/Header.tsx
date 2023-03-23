@@ -1,8 +1,11 @@
-import { Box, Button, Flex, HStack, Image } from '@chakra-ui/react';
+import { Box, Flex, HStack, Image } from '@chakra-ui/react';
 import { MenuItems } from '@components/Layouts/MenuItems';
+import { CustomButton } from '@components/Utilities/CustomButton';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 const Header = () => {
+    const router = useRouter();
     return (
         <Box w="full" bgColor="white" h="6rem">
             <Flex
@@ -22,19 +25,11 @@ const Header = () => {
                     <MenuItems text="courses" url="/courses" />
                     <MenuItems text="read from us" url="/blog" />
                 </HStack>
-                <Button
-                    bgColor="brand.400"
-                    color="white"
-                    fontSize="14px"
-                    borderRadius="8px"
-                    h="3.1rem"
-                    px="1.5rem"
-                    _hover={{
-                        bgColor: 'brand.500',
-                    }}
-                >
-                    Get a Quote
-                </Button>
+                <CustomButton
+                    bg="brand.400"
+                    text="Get a Quote"
+                    onClick={() => router.push('/contact')}
+                />
             </Flex>
         </Box>
     );

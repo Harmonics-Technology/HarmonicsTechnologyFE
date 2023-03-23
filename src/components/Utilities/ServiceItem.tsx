@@ -1,8 +1,26 @@
 import { Box, Grid, Image } from '@chakra-ui/react';
 import React from 'react';
 import { PageTop } from './PageTop';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-export const ServiceItem = ({ title, desc, btn, img, dir }) => {
+interface serviceItemProps {
+    title?: string;
+    desc?: string;
+    btn?: any;
+    img?: any;
+    dir?: any;
+    w?: any;
+    url?: any;
+}
+export const ServiceItem = ({
+    title,
+    desc,
+    btn,
+    img,
+    dir,
+    w = '85%',
+    url = '',
+}: serviceItemProps) => {
     return (
         <Grid
             templateColumns={['repeat(1,1fr)', 'repeat(2,1fr)']}
@@ -14,13 +32,23 @@ export const ServiceItem = ({ title, desc, btn, img, dir }) => {
                     align="left"
                     desc={desc}
                     btn={btn}
-                    w="85%"
+                    w={w}
                     dir={dir}
+                    url={url}
                 />
             </Box>
-            <Box w="auto" h="auto" ml={dir == 'ltr' ? 'auto' : '0'}>
-                <Image src={img} />
-            </Box>
+            <AnimationOnScroll
+                animateIn={
+                    dir == 'ltr'
+                        ? 'animate__fadeInRight'
+                        : 'animate__fadeInLeft'
+                }
+                delay={100}
+            >
+                <Box w="auto" h="auto" ml={dir == 'ltr' ? 'auto' : '0'}>
+                    <Image src={img} />
+                </Box>
+            </AnimationOnScroll>
         </Grid>
     );
 };
