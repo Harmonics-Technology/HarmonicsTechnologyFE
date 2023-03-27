@@ -12,7 +12,7 @@ export const Projects = () => {
                 sub="Our WORKS"
                 title="Some Of Our  Projects"
                 mx="auto"
-                // w="full"
+                w={['90%', 'unset']}
                 desc="Crafted with passion and precision, our work is a testament to our commitment to excellence."
                 bg="#EFE9FC"
             />
