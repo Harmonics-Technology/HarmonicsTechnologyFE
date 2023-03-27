@@ -49,8 +49,18 @@ export const ProjectItem = ({ title, desc, project, cat, img }) => {
                 </HStack>
             </Flex>
             <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
-                <Box w="full" h="1145px">
-                    <Image src={img} w="full" h="full" objectFit="cover" />
+                <Box w="full" h="100vh" overflow="hidden">
+                    <Image
+                        src={img}
+                        w="full"
+                        h="80%"
+                        objectFit="cover"
+                        objectPosition="top"
+                        transition="5s all ease"
+                        _hover={{
+                            objectPosition: 'bottom',
+                        }}
+                    />
                 </Box>
             </AnimationOnScroll>
         </Box>

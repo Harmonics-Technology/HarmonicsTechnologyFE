@@ -26,7 +26,7 @@ export const ServiceItem = ({
             templateColumns={['repeat(1,1fr)', 'repeat(2,1fr)']}
             alignItems="center"
         >
-            <Box order={dir == 'ltr' ? '0' : '1'}>
+            <Box order={['0', dir == 'ltr' ? '0' : '1']}>
                 <PageTop
                     title={title}
                     align="left"
@@ -45,7 +45,12 @@ export const ServiceItem = ({
                 }
                 delay={100}
             >
-                <Box w="auto" h="auto" ml={dir == 'ltr' ? 'auto' : '0'}>
+                <Box
+                    w={['90%', 'auto']}
+                    h="auto"
+                    mx={['auto', 'unset']}
+                    ml={['auto', dir == 'ltr' ? 'auto' : '0']}
+                >
                     <Image src={img} />
                 </Box>
             </AnimationOnScroll>

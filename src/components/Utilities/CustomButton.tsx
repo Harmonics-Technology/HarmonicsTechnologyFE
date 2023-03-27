@@ -9,6 +9,7 @@ interface customBtnProps {
     img?: any;
     variant?: any;
     onClick?: any;
+    w?: any;
 }
 
 export const CustomButton = ({
@@ -19,6 +20,7 @@ export const CustomButton = ({
     img,
     variant,
     onClick,
+    w,
 }: customBtnProps) => {
     return (
         <Button
@@ -29,6 +31,7 @@ export const CustomButton = ({
             borderColor={variant ? color : 'none'}
             h="3.1rem"
             px="1.5rem"
+            w={w}
             variant={variant}
             onClick={onClick}
             _hover={{
