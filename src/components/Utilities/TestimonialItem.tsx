@@ -11,20 +11,21 @@ export const TestimonialItem = ({ img, content, name, role }) => {
             borderRadius="8px"
         >
             <VStack w="70%" pos="relative" mx="auto" spacing="3rem">
+                <Image
+                    src="/assets/blockquote.png"
+                    w="32px !important"
+                    h="24px"
+                />
                 <Circle
                     size="120px"
-                    pos="absolute"
+                    pos="relative"
                     top="-40%"
                     // left="-101%"
                     overflow="hidden"
                 >
                     <Image src={img} w="full" h="full" objectFit="cover" />
                 </Circle>
-                <Image
-                    src="/assets/blockquote.png"
-                    w="32px !important"
-                    h="24px"
-                />
+
                 <Text
                     textAlign="center"
                     color="#252525"

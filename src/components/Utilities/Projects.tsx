@@ -37,7 +37,7 @@ export const Projects = () => {
                 cat={['Mobile', 'Web', 'Development', 'Product Design']}
                 img="/assets/99.png"
             />
-            <Box w="fit-content" mx="auto" mt="-4rem">
+            {/* <Box w="fit-content" mx="auto" mt="-4rem">
                 <Button
                     variant="outline"
                     borderColor="brand.100"
@@ -56,7 +56,7 @@ export const Projects = () => {
                 >
                     View All Projects
                 </Button>
-            </Box>
+            </Box> */}
         </Box>
     );
 };

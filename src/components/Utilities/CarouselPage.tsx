@@ -36,6 +36,7 @@ export const CarouselPage = () => {
                 sub="HOW WE WORK"
                 title="Our Mode of Operations "
                 mx="auto"
+                w={['90%', 'unset']}
                 desc="Grounded in empathy and design thinking, our work process is designed to give the best result to our clients"
             />
             <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
