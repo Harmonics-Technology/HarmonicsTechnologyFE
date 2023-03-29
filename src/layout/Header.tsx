@@ -25,10 +25,10 @@ const Header = () => {
                     flexDir={['column', 'row']}
                     w={['50%', '70%']}
                     bgColor={['white', 'transparent']}
-                    pos={['absolute', 'unset']}
-                    top=".68%"
+                    pos={['fixed', 'unset']}
+                    top="10%"
                     right={openMenu ? '0' : '-100%'}
-                    p={['1rem 2rem', '0']}
+                    p={['2rem 2rem', '0']}
                     zIndex="999"
                     h={['100vh', 'auto']}
                     gap={['3rem', '0']}

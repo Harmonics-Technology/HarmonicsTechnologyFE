@@ -53,7 +53,22 @@ export const CarouselPage = () => {
                                     type="button"
                                     onClick={onClickHandler}
                                     title={label}
-                                    style={{ ...arrowStyles, left: 0 }}
+                                    position="absolute"
+                                    zIndex={2}
+                                    top={[
+                                        'calc(100% + 30px) ',
+                                        'calc(50% - 25px)',
+                                    ]}
+                                    width="40px"
+                                    height="40px"
+                                    cursor="pointer"
+                                    color="#A03CAE"
+                                    borderRadius="50%"
+                                    border="1px solid #A03CAE"
+                                    background="transparent"
+                                    padding={0}
+                                    left={0}
+                                    // style={{ ...arrowStyles, left: 0 }}
                                 >
                                     <BsChevronLeft />
                                 </Button>
@@ -65,7 +80,22 @@ export const CarouselPage = () => {
                                     type="button"
                                     onClick={onClickHandler}
                                     title={label}
-                                    style={{ ...arrowStyles, right: 0 }}
+                                    position="absolute"
+                                    zIndex={2}
+                                    top={[
+                                        'calc(100% + 30px) ',
+                                        'calc(50% - 25px)',
+                                    ]}
+                                    width="40px"
+                                    height="40px"
+                                    cursor="pointer"
+                                    color="#A03CAE"
+                                    borderRadius="50%"
+                                    border="1px solid #A03CAE"
+                                    background="transparent"
+                                    padding={0}
+                                    right={0}
+                                    // style={{ ...arrowStyles, right: 0 }}
                                 >
                                     <BsChevronRight />
                                 </Button>
