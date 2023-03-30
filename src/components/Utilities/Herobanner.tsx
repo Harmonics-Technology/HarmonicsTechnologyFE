@@ -17,17 +17,22 @@ export const Herobanner = () => {
     return (
         <Box
             bg="radial-gradient(126.96% 275.84% at 90.24% 16.36%, #EFE9FC 0%, rgba(239, 233, 252, 0.165605) 30.73%, #EFE9FC 81.77%, rgba(239, 233, 252, 0) 100%)"
-            py="6rem"
+            py={['3rem', '6rem']}
         >
             <Flex
                 justify="center"
                 align="center"
                 flexDir="column"
-                w="80%"
+                w={['90%', '80%']}
                 mx="auto"
                 pos="relative"
             >
-                <Box pos="absolute" left="2%" top="0">
+                <Box
+                    pos="absolute"
+                    left="2%"
+                    top="0"
+                    display={['none', 'block']}
+                >
                     <AnimationOnScroll
                         animateIn="animate__fadeInDown"
                         delay={100}
@@ -35,7 +40,12 @@ export const Herobanner = () => {
                         <Image src="/assets/squares.png" />
                     </AnimationOnScroll>
                 </Box>
-                <Box pos="absolute" right="7%" bottom="40%">
+                <Box
+                    pos="absolute"
+                    right="7%"
+                    bottom="40%"
+                    display={['none', 'block']}
+                >
                     <AnimationOnScroll
                         animateIn="animate__pulse"
                         delay={150}
@@ -70,13 +80,13 @@ export const Herobanner = () => {
                 </HStack>
 
                 <Heading
-                    fontFamily="'General Sans', sans-serif"
-                    fontWeight="600"
+                    fontFamily={['BR Firma', "'General Sans', sans-serif"]}
+                    fontWeight={['700', '600']}
                     color="brand.300"
-                    fontSize="130px"
-                    letterSpacing="-0.07em"
+                    fontSize={['60px', '130px']}
+                    letterSpacing={['-6%', '-0.07em']}
                     textAlign="center"
-                    lineHeight="103px"
+                    lineHeight={['75px', '103px']}
                     zIndex="2"
                 >
                     <AnimationOnScroll animateIn="animate__fadeInUp">
@@ -95,36 +105,28 @@ export const Herobanner = () => {
                         Products
                     </AnimationOnScroll>
                 </Heading>
-                <AnimationOnScroll
-                    animateIn="animate__fadeInUp"
-                    duration={2}
-                    style={{
-                        position: 'absolute',
-                        top: '212px',
-                        left: '26%',
-                        transform: 'translateX(-49%)',
-                        width: '49%',
-                    }}
+                <Box
+                    w={['95%', '49%']}
+                    left="50%"
+                    transform="translateX(-49%)"
+                    pos="absolute"
+                    top={['170px', '212px']}
                 >
-                    <Box
-                        h="47px"
-                        bgColor="brand.100"
-                        // w="49%"
-                        // left="50%"
-                        // transform="translateX(-49%)"
-                        // pos="absolute"
-                        // top="212px"
-                        zIndex="1"
-                    />
-                </AnimationOnScroll>
-                <Box w="50%" mt="3rem">
+                    <AnimationOnScroll
+                        animateIn="animate__fadeInUp"
+                        duration={2}
+                    >
+                        <Box h="47px" bgColor="brand.100" zIndex="1" />
+                    </AnimationOnScroll>
+                </Box>
+                <Box w={['100%', '50%']} mt={['1rem', '3rem']}>
                     <AnimationOnScroll
                         animateIn="animate__fadeInUp"
                         delay={100}
                     >
                         <Text
                             fontFamily="Nunito"
-                            fontSize="24px"
+                            fontSize={['1rem', '24px']}
                             letterSpacing="-0.02em"
                             color="rgba(26, 26, 26, 0.72)"
                             textAlign="center"
@@ -134,10 +136,16 @@ export const Herobanner = () => {
                             are tailored to our clients' unique requirements.
                         </Text>
                     </AnimationOnScroll>
-                    <HStack spacing="0" gap="24px" justify="center">
+                    <HStack
+                        spacing="0"
+                        gap="24px"
+                        justify="center"
+                        flexDir={['column', 'row']}
+                    >
                         <CustomButton
                             text="Discover Our Offers"
                             bg="brand.100"
+                            w={['full', 'unset']}
                             icon={
                                 <Icon
                                     as={FiArrowUpRight}
@@ -146,7 +154,7 @@ export const Herobanner = () => {
                                 />
                             }
                         />
-                        <CustomButton text="Learn More" />
+                        <CustomButton text="Learn More" w={['full', 'unset']} />
                     </HStack>
                 </Box>
             </Flex>

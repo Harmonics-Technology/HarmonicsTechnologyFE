@@ -4,9 +4,10 @@ import { Text } from '@chakra-ui/react';
 export const HelpTextItem = ({ text }) => {
     return (
         <Text
-            fontSize="20px"
+            fontSize={['16px', '20px']}
             fontFamily="Metropolis"
-            lineHeight="30px"
+            fontWeight={['500', '']}
+            lineHeight={['24px', '30px']}
             color="white"
             mb=".5rem"
         >

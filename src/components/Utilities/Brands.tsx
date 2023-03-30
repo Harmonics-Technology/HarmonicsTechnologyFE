@@ -1,4 +1,4 @@
-import { Box, HStack } from '@chakra-ui/react';
+import { Box, HStack, Flex, Grid } from '@chakra-ui/react';
 import React from 'react';
 import { PageTop } from './PageTop';
 import { BrandItem } from '@components/Layouts/BrandItem';
@@ -12,8 +12,14 @@ export const Brands = () => {
                 title="We are humble and proud to work with amazing clients."
                 mx="auto"
                 minH="200px"
+                w={['90%', '45%']}
             />
-            <HStack gap="2.9rem" spacing="0" justify="center">
+            <Flex
+                gap={['1rem', '2.9rem']}
+                justify={['start', 'center']}
+                flexWrap="wrap"
+                pl={['1rem', '']}
+            >
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={1}>
                     <BrandItem img="/assets/ts.png" />
                 </AnimationOnScroll>
@@ -23,7 +29,7 @@ export const Brands = () => {
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={3}>
                     <BrandItem img="/assets/sme.png" />
                 </AnimationOnScroll>
-            </HStack>
+            </Flex>
         </Box>
     );
 };

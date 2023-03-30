@@ -14,7 +14,7 @@ export const Works = () => {
                 heading="Book a Consultation"
                 sub="Get personalised technology solutions with our knowledgeable professionals. Book your appointment today and receive detailed information via email. We're here to help!"
                 btn="Book a Free Consultation "
-                img="/assets/contactb.png"
+                img="/assets/contactb.jpg"
             />
         </Box>
     );

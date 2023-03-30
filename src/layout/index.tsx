@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     return (
         <>
             <Header />
-            <Box>{children}</Box>
+            <Box pt={['6rem', '0']}>{children}</Box>
             <Footer />
             <ScrollToTop
                 smooth

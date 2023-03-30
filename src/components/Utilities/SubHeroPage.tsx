@@ -8,7 +8,7 @@ export const SubHeroPage = () => {
                 heading="We are a Team of Creative Gurus"
                 sub="We help startups like yours grow revenue and improve customer loyalty with beautifully design software"
                 btn="Book a Free Consultation"
-                img="/assets/about.png"
+                img="/assets/about.jpg"
             />
         </Box>
     );

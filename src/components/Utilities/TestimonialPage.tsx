@@ -31,15 +31,16 @@ export const TestimonialPage = () => {
         margin: '0 8px 0 0',
     };
     return (
-        <Box>
+        <Box mt={['5rem', 'unset']}>
             <PageTop
                 sub="Testimonials"
                 title="What our clients say"
                 mx="auto"
+                w={['90%', '45%']}
                 desc="Crafted with passion and precision, our work is a testament to our commitment to excellence."
             />
             <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
-                <Box w="70%" mx="auto">
+                <Box w={['90', '70%']} mx="auto">
                     <Carousel
                         showStatus={false}
                         autoPlay
@@ -113,25 +114,25 @@ export const TestimonialPage = () => {
                             name="Doyin Adebayo"
                             role="team lead, OCT Groups"
                             content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboutb.png"
+                            img="/assets/aboutb.jpg"
                         />
                         <TestimonialItem
                             name="Doyin Adebayo"
                             role="team lead, OCT Groups"
                             content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboutc.png"
+                            img="/assets/aboutc.jpg"
                         />
                         <TestimonialItem
                             name="Doyin Adebayo"
                             role="team lead, OCT Groups"
                             content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboute.png"
+                            img="/assets/aboute.jpg"
                         />
                         <TestimonialItem
                             name="Doyin Adebayo"
                             role="team lead, OCT Groups"
                             content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboutd.png"
+                            img="/assets/aboutd.jpg"
                         />
                     </Carousel>
                 </Box>

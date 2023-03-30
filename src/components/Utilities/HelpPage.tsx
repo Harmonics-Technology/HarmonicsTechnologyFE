@@ -1,4 +1,13 @@
-import { Box, Flex, Heading, Image, VStack, Button } from '@chakra-ui/react';
+import {
+    Box,
+    Flex,
+    Heading,
+    Image,
+    VStack,
+    Button,
+    Show,
+    Hide,
+} from '@chakra-ui/react';
 import { HelpTextItem } from '@components/Layouts/HelpTextItem';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -10,7 +19,11 @@ export const HelpPage = () => {
         <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
             <Box
                 w="90%"
-                bgColor="brand.500"
+                bg={[
+                    'linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/assets/contact.jpg);',
+                    'brand.500',
+                ]}
+                transform={['scaleX(-1)', 'none']}
                 borderRadius="24px"
                 mx="auto"
                 h="638px"
@@ -19,13 +32,16 @@ export const HelpPage = () => {
                 mb="5rem"
             >
                 <Flex
-                    w="85%"
+                    w={['85%', '85%']}
                     mx="auto"
                     align="flex-end"
                     gap="3rem"
-                    top="-14%"
+                    top={['50%', '-14%']}
                     left="50%"
-                    transform="translateX(-50%)"
+                    transform={[
+                        'translate(-50%, -50%) scaleX(-1)',
+                        'translateX(-50%)',
+                    ]}
                     pos="absolute"
                 >
                     <Box
@@ -33,21 +49,27 @@ export const HelpPage = () => {
                         w="448px"
                         borderRadius="20px"
                         overflow="hidden"
+                        display={['none', 'block']}
                     >
                         <Image
-                            src="/assets/contact.png"
+                            src="/assets/contact.jpg"
                             w="full"
                             h="full"
                             objectFit="cover"
                         />
                     </Box>
-                    <VStack mb="2rem" align="flex-start" spacing="2rem" w="45%">
+                    <VStack
+                        mb={['0', '2rem']}
+                        align="flex-start"
+                        spacing="2rem"
+                        w={['100%', '45%']}
+                    >
                         <Heading
                             color="white"
-                            fontSize="40px"
-                            fontWeight="700"
+                            fontSize={['32px', '40px']}
                             letterSpacing="-0.04em"
-                            lineHeight="52px"
+                            lineHeight={['48px', '52px']}
+                            fontWeight={['600', '700']}
                         >
                             We are Here to help you Standout Digitally!
                         </Heading>
@@ -71,8 +93,8 @@ export const HelpPage = () => {
                             fontWeight="500"
                             px="1.5rem"
                             borderRadius="4px"
-                            h="3rem"
-                            w="fit-content"
+                            h={['3.5rem', '3rem']}
+                            w={['full', 'fit-content']}
                             onClick={() => router.push('/contact')}
                             _hover={{
                                 bgColor: 'white',

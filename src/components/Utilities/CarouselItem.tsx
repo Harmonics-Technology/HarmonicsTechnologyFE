@@ -10,9 +10,9 @@ export const CarouselItem = ({ title, desc, img, dir }) => {
             h="fit-content"
         >
             <Box
-                order={dir == 'ltr' ? '0' : '1'}
+                order={['0', dir == 'ltr' ? '0' : '1']}
                 ml={dir == 'ltr' ? '0' : 'auto'}
-                w="90%"
+                w={['100%', '90%']}
             >
                 <Heading
                     fontFamily="DM Sans"
@@ -38,7 +38,11 @@ export const CarouselItem = ({ title, desc, img, dir }) => {
                     {desc}
                 </Text>
             </Box>
-            <Box w="70%" h="auto" ml={dir == 'ltr' ? 'auto' : '0'}>
+            <Box
+                w={['100%', '70%']}
+                h="auto"
+                ml={['0', dir == 'ltr' ? 'auto' : '0']}
+            >
                 <Image src={img} h="auto" w="full" />
             </Box>
         </Grid>

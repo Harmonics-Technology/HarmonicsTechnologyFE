@@ -50,13 +50,13 @@ export const PageTop = ({
         <Flex justify="center" align={align} minH={minH} bg={bg}>
             <Flex
                 flexDir="column"
+                ml={['0', dir == 'ltr' ? '0' : 'auto']}
                 mx={mx}
-                ml={dir == 'ltr' ? '0' : 'auto'}
                 w={w}
             >
                 <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
                     <Text
-                        fontFamily="General Sans"
+                        fontFamily={['BR Firma', 'General Sans']}
                         color="brand.100"
                         textAlign={align}
                         textTransform="uppercase"
@@ -69,13 +69,13 @@ export const PageTop = ({
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
                     <Heading
-                        fontFamily="DM Sans"
+                        fontFamily={['BR Firma', 'DM Sans']}
                         color={color}
                         textAlign={align}
                         textTransform="capitalize"
                         fontWeight="600"
                         letterSpacing="-0.04em"
-                        fontSize="40px"
+                        fontSize={['20px', '40px']}
                     >
                         {title}
                     </Heading>
@@ -86,7 +86,7 @@ export const PageTop = ({
                         color={color}
                         textAlign={align}
                         fontWeight="400"
-                        fontSize="20px"
+                        fontSize={['1rem', '20px']}
                         mt="1rem"
                     >
                         {parse(desc as string)}
@@ -107,8 +107,8 @@ export const PageTop = ({
                             // mt=".5rem"
                             borderRadius="4px"
                             h="3rem"
-                            w="fit-content"
-                            onClick={() => router.push( url )}
+                            w={['full', 'fit-content']}
+                            onClick={() => router.push(url)}
                             _hover={{
                                 bgColor: 'brand.100',
                                 color: 'white',

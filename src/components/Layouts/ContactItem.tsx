@@ -1,4 +1,5 @@
-import { VStack, Circle, Icon, Heading, Text } from '@chakra-ui/react';
+import { VStack, Circle, Icon, Heading, Text, HStack } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 
 export const ContactItem = ({ icon, title, desc, sub }) => {
@@ -8,32 +9,44 @@ export const ContactItem = ({ icon, title, desc, sub }) => {
             align="flex-start"
             p="2rem"
             borderRadius="10px"
-            spacing='2rem'
+            spacing={['1rem', '2rem']}
         >
-            <Circle size="6.25rem" bgColor="#6B2874">
-                <Icon as={icon} fontSize="50px" color="white" />
+            <Circle size={['5rem', '6.25rem']} bgColor="#6B2874">
+                <Icon as={icon} fontSize={['40px', '50px']} color="white" />
             </Circle>
             <Heading
                 fontFamily="BR Firma"
-                fontSize="2rem"
+                fontSize={['20px', '2rem']}
                 lineHeight="48px"
                 fontWeight="600"
                 color="black"
             >
                 {title}
             </Heading>
-            <Text lineHeight="30px" fontSize="20px" color="black" w="80%">
+            <Text
+                lineHeight="30px"
+                fontSize={['1rem', '20px']}
+                color="black"
+                w={['full', '80%']}
+            >
                 {desc}
             </Text>
-            <Text
-                fontFamily="Metropolis"
-                fontSize="20px"
-                lineHeight="126%"
-                fontWeight="400"
-                color="#252525"
-            >
-                {sub}
-            </Text>
+            <HStack>
+                {sub.map((x) => (
+                    <Link passHref href={x.url}>
+                        <Text
+                            fontFamily="Metropolis"
+                            fontSize={['16px', '20px']}
+                            lineHeight="126%"
+                            fontWeight="400"
+                            color="#252525"
+                            mb="0"
+                        >
+                            {x.num}
+                        </Text>
+                    </Link>
+                ))}
+            </HStack>
         </VStack>
     );
 };

@@ -5,14 +5,16 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const ProjectItem = ({ title, desc, project, cat, img }) => {
     return (
-        <Box mb="7rem">
+        <Box mb={['2rem', '7rem']}>
             <Flex
                 justify="space-between"
                 align="flex-end"
-                w="80%"
+                flexDir={['column', 'row']}
+                w={['90%', '80%']}
                 mx="auto"
                 mb="4rem"
                 mt="4rem"
+                gap={['1.5rem', '0']}
             >
                 <PageTop
                     title={title}
@@ -22,7 +24,13 @@ export const ProjectItem = ({ title, desc, project, cat, img }) => {
                     w="100%"
                     minH="150px"
                 />
-                <HStack spacing="0" gap="1rem" justify="flex-end" w="full">
+                <HStack
+                    spacing="0"
+                    gap={['.4rem', '1rem']}
+                    justify={['flex-start', 'flex-end']}
+                    w="full"
+                    flexWrap="wrap"
+                >
                     {cat.map((x: string, i: any) => (
                         <AnimationOnScroll
                             animateIn="animate__fadeInRight"
@@ -31,9 +39,9 @@ export const ProjectItem = ({ title, desc, project, cat, img }) => {
                             <Flex
                                 h="2rem"
                                 px="1rem"
-                                bgColor="#EFE9FC"
-                                fontSize="14px"
-                                fontWeight="600"
+                                bgColor={['#DFBEE4', '#EFE9FC']}
+                                fontSize={['13px', '14px']}
+                                fontWeight={['400', '600']}
                                 fontFamily="General Sans"
                                 letterSpacing="-0.04em"
                                 textAlign="center"
@@ -49,8 +57,26 @@ export const ProjectItem = ({ title, desc, project, cat, img }) => {
                 </HStack>
             </Flex>
             <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
-                <Box w="full" h="1145px">
-                    <Image src={img} w="full" h="full" objectFit="cover" />
+                <Box
+                    w={['95%', 'full']}
+                    h={['280px', '100vh']}
+                    overflow="hidden"
+                    border={['12px solid black', '0']}
+                    borderRadius={['12px', '0']}
+                    mx="auto"
+                    boxShadow={['lg', 'none']}
+                >
+                    <Image
+                        src={img}
+                        w="full"
+                        h={['full', '80%']}
+                        objectFit="cover"
+                        objectPosition="top"
+                        transition="5s all ease"
+                        _hover={{
+                            objectPosition: 'bottom',
+                        }}
+                    />
                 </Box>
             </AnimationOnScroll>
         </Box>

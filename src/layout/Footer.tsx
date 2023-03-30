@@ -7,6 +7,8 @@ import {
     Image,
     Text,
     VStack,
+    Show,
+    Hide,
 } from '@chakra-ui/react';
 import { FooterHeadings } from '@components/Layouts/FooterHeadings';
 import { FooterMenuItems } from '@components/Layouts/FooterMenuItems';
@@ -25,28 +27,36 @@ function Footer() {
         <Box w="full" bgColor="brand.600">
             <Flex
                 align="flex-start"
-                w="80%"
+                w={['90%', '80%']}
                 mx="auto"
-                py="3.5rem"
+                py={['2rem', '3.5rem']}
                 justify="space-between"
+                flexDir={['column', 'row']}
+                gap={['1rem', '0']}
             >
-                <Box w="30%">
-                    <Box w="280px" mb="2rem">
-                        <Image src="/assets/logowhite.png" w="full" h="auto" />
+                <Box w={['full', '30%']}>
+                    <Box w={['180px', '280px']} mb={['1.5rem', '2rem']}>
+                        <Image src="/assets/logowhite.png" w="full" />
                     </Box>
                     <Text
                         fontWeight="400"
                         fontSize=".9rem"
                         color="white"
-                        w="300px"
+                        w={['full', '300px']}
+                        // ml={['10px', '']}
                     >
                         We create well-researched user interfaces and build
                         resourceful applications that are tailored to suit our
                         client’s specific needs.
                     </Text>
                 </Box>
-                <Box w="60%">
-                    <Grid w="full" templateColumns={['repeat(3,1fr)']}>
+                <Box w={['full', '60%']}>
+                    <Grid
+                        w="full"
+                        templateColumns={['repeat(2,1fr)', 'repeat(3,1fr)']}
+                        mb={['3rem', '0']}
+                        gap={['1rem', '0']}
+                    >
                         <VStack spacing="0" gap="1rem" align="flex-start">
                             <FooterHeadings text="IT Services" />
                             <FooterMenuItems
@@ -72,7 +82,12 @@ function Footer() {
                             <FooterMenuItems text="FAQs" url="/contact" />
                             <FooterMenuItems text="Read from us" url="/blog" />
                         </VStack>
-                        <VStack spacing="0" gap="1rem" align="flex-start">
+                        <VStack
+                            spacing="0"
+                            gap="1rem"
+                            align="flex-start"
+                            w={['15rem', '']}
+                        >
                             <FooterHeadings text="Contact" />
                             <Flex>
                                 <FooterMenuItems
@@ -105,34 +120,46 @@ function Footer() {
                 h="fit-content"
                 pt="1rem"
                 pb="2rem"
+                gap={['1rem', '0']}
+                flexDir={['column-reverse', 'row']}
+                pos="relative"
             >
                 <Text color="white" mb="0" fontSize=".9rem">
                     © {year} Harmonics Technology. All rights reserved{' '}
                 </Text>
-                <HStack spacing="0" gap="1.5rem">
+                <HStack spacing="0" gap={['.5rem', '1.5rem']}>
                     <FooterMenuItems text="Terms and Condition" url="/" />
                     <FooterMenuItems text="Cookies Policy" url="/" />
                     <FooterMenuItems text="Privacy Policy" url="/" />
-                    <Socials
-                        icon={AiOutlineInstagram}
-                        url="https://www.instagram.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={AiFillLinkedin}
-                        url="https://www.linkedin.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={FaFacebook}
-                        url="https://www.facebook.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={AiOutlineTwitter}
-                        url="https://www.twitter.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={AiFillYoutube}
-                        url="https://www.youtube.com/harmonicstechnology/"
-                    />
+                    <HStack
+                        spacing="0"
+                        gap="1.5rem"
+                        pos={['absolute', 'unset']}
+                        top="-48%"
+                        left="50%"
+                        transform={['translateX(-50%)', 'unset']}
+                    >
+                        <Socials
+                            icon={AiOutlineInstagram}
+                            url="https://www.instagram.com/harmonicstechnology/"
+                        />
+                        <Socials
+                            icon={AiFillLinkedin}
+                            url="https://www.linkedin.com/harmonicstechnology/"
+                        />
+                        <Socials
+                            icon={FaFacebook}
+                            url="https://www.facebook.com/harmonicstechnology/"
+                        />
+                        <Socials
+                            icon={AiOutlineTwitter}
+                            url="https://www.twitter.com/harmonicstechnology/"
+                        />
+                        <Socials
+                            icon={AiFillYoutube}
+                            url="https://www.youtube.com/harmonicstechnology/"
+                        />
+                    </HStack>
                 </HStack>
             </Flex>
         </Box>

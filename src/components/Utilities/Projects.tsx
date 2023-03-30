@@ -12,7 +12,7 @@ export const Projects = () => {
                 sub="Our WORKS"
                 title="Some Of Our  Projects"
                 mx="auto"
-                // w="full"
+                w={['90%', '45%']}
                 desc="Crafted with passion and precision, our work is a testament to our commitment to excellence."
                 bg="#EFE9FC"
             />
@@ -21,23 +21,23 @@ export const Projects = () => {
                 desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
                 project="https://studiomart.com"
                 cat={['Mobile', 'Web', 'Development', 'Product Design']}
-                img="/assets/71.png"
+                img="/assets/71.jpg"
             />
             <ProjectItem
                 title="Property Mattaz"
                 desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
                 project="https://propertymattaz.com"
                 cat={['Mobile', 'Web', 'Development']}
-                img="/assets/98.png"
+                img="/assets/98.jpg"
             />
             <ProjectItem
                 title="Liquede"
                 desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
                 project="https://liquede.com"
                 cat={['Mobile', 'Web', 'Development', 'Product Design']}
-                img="/assets/99.png"
+                img="/assets/99.jpg"
             />
-            <Box w="fit-content" mx="auto" mt="-4rem">
+            {/* <Box w="fit-content" mx="auto" mt="-4rem">
                 <Button
                     variant="outline"
                     borderColor="brand.100"
@@ -56,7 +56,7 @@ export const Projects = () => {
                 >
                     View All Projects
                 </Button>
-            </Box>
+            </Box> */}
         </Box>
     );
 };
