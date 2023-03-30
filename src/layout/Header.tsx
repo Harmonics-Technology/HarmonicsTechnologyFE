@@ -1,13 +1,17 @@
-import { Box, Flex, HStack, Icon, Image, Stack } from '@chakra-ui/react';
+import { Box, Flex, HStack, Icon, Image, Link, Stack } from '@chakra-ui/react';
+import useClickOutside from '@components/HooksHelpers/useClickOutside';
 import { MenuItems } from '@components/Layouts/MenuItems';
 import { CustomButton } from '@components/Utilities/CustomButton';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { BsList } from 'react-icons/bs';
 
 const Header = () => {
     const router = useRouter();
     const [openMenu, setOpenMenu] = useState(false);
+    const close = useCallback(() => setOpenMenu(false), []);
+    const popover = useRef(null);
+    useClickOutside(popover, close);
     return (
         <Box
             w="full"
@@ -15,6 +19,7 @@ const Header = () => {
             h="6rem"
             pos={['fixed', 'unset']}
             zIndex="999"
+            ref={popover}
         >
             <Flex
                 w={['90%', '80%']}
@@ -23,9 +28,11 @@ const Header = () => {
                 align="center"
                 h="full"
             >
-                <Box w="10rem">
-                    <Image src="/assets/logo.png" w="full" h="auto" />
-                </Box>
+                <Link href="/">
+                    <Box w="10rem">
+                        <Image src="/assets/logo.png" w="full" h="auto" />
+                    </Box>
+                </Link>
                 <Flex
                     justify={['flex-start', 'space-between']}
                     flexDir={['column', 'row']}
