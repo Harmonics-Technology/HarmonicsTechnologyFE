@@ -27,26 +27,22 @@ function Footer() {
         <Box w="full" bgColor="brand.600">
             <Flex
                 align="flex-start"
-                w="80%"
-                mx={['.5rem', 'auto']}
-                py={['1rem', '3.5rem']}
+                w={['90%', '80%']}
+                mx="auto"
+                py={['2rem', '3.5rem']}
                 justify="space-between"
                 flexDir={['column', 'row']}
+                gap={['1rem', '0']}
             >
-                <Box w="30%">
-                    <Box w="280px" mb="2rem">
-                        <Image
-                            src="/assets/logowhite.png"
-                            // w="full"
-                            w={['9rem', 'full']}
-                            h={['3rem', 'auto']}
-                        />
+                <Box w={['full', '30%']}>
+                    <Box w={['180px', '280px']} mb={['1.5rem', '2rem']}>
+                        <Image src="/assets/logowhite.png" w="full" />
                     </Box>
                     <Text
                         fontWeight="400"
                         fontSize=".9rem"
                         color="white"
-                        w={['360px', '300px']}
+                        w={['full', '300px']}
                         // ml={['10px', '']}
                     >
                         We create well-researched user interfaces and build
@@ -54,10 +50,12 @@ function Footer() {
                         client’s specific needs.
                     </Text>
                 </Box>
-                <Box w="60%">
+                <Box w={['full', '60%']}>
                     <Grid
                         w="full"
                         templateColumns={['repeat(2,1fr)', 'repeat(3,1fr)']}
+                        mb={['3rem', '0']}
+                        gap={['1rem', '0']}
                     >
                         <VStack spacing="0" gap="1rem" align="flex-start">
                             <FooterHeadings text="IT Services" />
@@ -74,11 +72,7 @@ function Footer() {
                                 url="/services/software"
                             />
                         </VStack>
-                        <VStack
-                            spacing="0"
-                            gap="1rem"
-                            align={['flex-start', 'flex-end']}
-                        >
+                        <VStack spacing="0" gap="1rem" align="flex-start">
                             <FooterHeadings text="Company" />
                             <FooterMenuItems text="About Us" url="/about" />
                             <FooterMenuItems
@@ -117,69 +111,34 @@ function Footer() {
                     </Grid>
                 </Box>
             </Flex>
-            <Hide above="md">
-                <Flex gap="20px" justifyContent="center" my="10px">
-                    <Socials
-                        icon={AiOutlineInstagram}
-                        url="https://www.instagram.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={AiFillLinkedin}
-                        url="https://www.linkedin.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={FaFacebook}
-                        url="https://www.facebook.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={AiOutlineTwitter}
-                        url="https://www.twitter.com/harmonicstechnology/"
-                    />
-                    <Socials
-                        icon={AiFillYoutube}
-                        url="https://www.youtube.com/harmonicstechnology/"
-                    />
-                </Flex>
-            </Hide>
             <Divider w="full" bgColor="white" />
-            <Hide above="md">
-                <Flex
-                    mx="15px"
-                    my="20px"
-                    bgColor="brand.600"
-                    justifyContent="space-between"
-                >
+            <Flex
+                justify="space-between"
+                w="80%"
+                mx="auto"
+                align="center"
+                h="fit-content"
+                pt="1rem"
+                pb="2rem"
+                gap={['1rem', '0']}
+                flexDir={['column-reverse', 'row']}
+                pos="relative"
+            >
+                <Text color="white" mb="0" fontSize=".9rem">
+                    © {year} Harmonics Technology. All rights reserved{' '}
+                </Text>
+                <HStack spacing="0" gap={['.5rem', '1.5rem']}>
                     <FooterMenuItems text="Terms and Condition" url="/" />
                     <FooterMenuItems text="Cookies Policy" url="/" />
                     <FooterMenuItems text="Privacy Policy" url="/" />
-                </Flex>
-                <Text
-                    color="white"
-                    mx="20px"
-                    mb="10px"
-                    bgColor="brand.600"
-                    fontSize=".9rem"
-                >
-                    © {year} Harmonics Technology. All rights reserved{' '}
-                </Text>
-            </Hide>
-            <Show above="md">
-                <Flex
-                    justify="space-between"
-                    w="80%"
-                    mx="auto"
-                    align="center"
-                    h="fit-content"
-                    pt="1rem"
-                    pb="2rem"
-                >
-                    <Text color="white" mb="0" fontSize=".9rem">
-                        © {year} Harmonics Technology. All rights reserved{' '}
-                    </Text>
-                    <HStack spacing="0" gap="1.5rem">
-                        <FooterMenuItems text="Terms and Condition" url="/" />
-                        <FooterMenuItems text="Cookies Policy" url="/" />
-                        <FooterMenuItems text="Privacy Policy" url="/" />
+                    <HStack
+                        spacing="0"
+                        gap="1.5rem"
+                        pos={['absolute', 'unset']}
+                        top="-48%"
+                        left="50%"
+                        transform={['translateX(-50%)', 'unset']}
+                    >
                         <Socials
                             icon={AiOutlineInstagram}
                             url="https://www.instagram.com/harmonicstechnology/"
@@ -201,8 +160,8 @@ function Footer() {
                             url="https://www.youtube.com/harmonicstechnology/"
                         />
                     </HStack>
-                </Flex>
-            </Show>
+                </HStack>
+            </Flex>
         </Box>
     );
 }

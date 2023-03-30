@@ -8,20 +8,6 @@ import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const CarouselPage = () => {
-    const arrowStyles: CSSProperties = {
-        position: 'absolute',
-        zIndex: 2,
-        top: 'calc(50% - 25px)',
-        width: 40,
-        height: 40,
-        cursor: 'pointer',
-        color: '#A03CAE',
-        borderRadius: '50%',
-        border: '1px solid #A03CAE',
-        background: 'transparent',
-        padding: 0,
-    };
-
     const indicatorStyles: CSSProperties = {
         background: '#D8D8D8',
         width: 20,
@@ -36,11 +22,11 @@ export const CarouselPage = () => {
                 sub="HOW WE WORK"
                 title="Our Mode of Operations "
                 mx="auto"
-                w={['90%', 'unset']}
+                w={['90%', '45%']}
                 desc="Grounded in empathy and design thinking, our work process is designed to give the best result to our clients"
             />
             <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
-                <Box w="80%" mx="auto">
+                <Box w={['90%', '80%']} mx="auto">
                     <Carousel
                         showStatus={false}
                         autoPlay
@@ -143,25 +129,25 @@ export const CarouselPage = () => {
                             title="Concept"
                             desc="In order to give the project a clear vision and direction and to help ensure that all project stakeholders are aligned and working toward a common goal, we define the project scope, objectives, and goals at this stage."
                             dir="ltr"
-                            img="/assets/create.png"
+                            img="/assets/create.jpg"
                         />
                         <CarouselItem
                             title="Budget"
                             desc="Once the project's scope has been understood, its cost is estimated, a budget is created, resources are appropriately allocated, and the project is monitored to ensure that it is carried out within the constraints of available resources."
                             dir="rtl"
-                            img="/assets/budget.png"
+                            img="/assets/budget.jpg"
                         />
                         <CarouselItem
                             title="Develop"
                             desc="After having a clear understanding of the project's scope and a financial plan in place, we move on to project ideation, development, and implementation. We conduct research to guide our development of the project's objectives."
                             dir="ltr"
-                            img="/assets/develop.png"
+                            img="/assets/develop.jpg"
                         />
                         <CarouselItem
                             title="Result"
                             desc="In order to ensure that projects are finished on schedule, within budget, and with the expected result, we put in the necessary measures by adhering to a result-oriented project execution methodology."
                             dir="rtl"
-                            img="/assets/result.png"
+                            img="/assets/result.jpg"
                         />
                     </Carousel>
                 </Box>

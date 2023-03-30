@@ -52,7 +52,7 @@ export const PageTop = ({
                 flexDir="column"
                 ml={['0', dir == 'ltr' ? '0' : 'auto']}
                 mx={mx}
-                w={['80%', 'unset']}
+                w={w}
             >
                 <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
                     <Text

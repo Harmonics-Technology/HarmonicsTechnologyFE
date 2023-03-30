@@ -12,12 +12,12 @@ interface AboutItemProps {
 
 export const AboutItem = ({ img, head, text, dir }: AboutItemProps) => {
     return (
-        <Flex justify="space-between" gap="3rem">
+        <Flex justify="space-between" gap="3rem" flexDir={['column', 'row']}>
             <Box
-                w={dir ? 'full' : '45%'}
+                w={['full', dir ? 'full' : '45%']}
                 h="auto"
                 ml={dir == 'ltr' ? 'auto' : '0'}
-                order={dir == 'ltr' ? 1 : 0}
+                order={[1, dir == 'ltr' ? 1 : 0]}
             >
                 <AnimationOnScroll
                     animateIn={
@@ -29,7 +29,10 @@ export const AboutItem = ({ img, head, text, dir }: AboutItemProps) => {
                     <Image w="full" h="auto" src={img} />
                 </AnimationOnScroll>
             </Box>
-            <Box w={dir ? 'full' : '55%'} order={dir == 'ltr' ? 0 : 1}>
+            <Box
+                w={['full', dir ? 'full' : '55%']}
+                order={[0, dir == 'ltr' ? 0 : 1]}
+            >
                 <AnimationOnScroll
                     animateIn={
                         dir == 'ltr'
@@ -39,7 +42,7 @@ export const AboutItem = ({ img, head, text, dir }: AboutItemProps) => {
                 >
                     {head && (
                         <Heading
-                            fontSize="40px"
+                            fontSize={['20px', '40px']}
                             lineHeight="52px"
                             letterSpacing="-0.04em"
                             color="#252525"

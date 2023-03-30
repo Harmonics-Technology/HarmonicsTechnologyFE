@@ -13,18 +13,19 @@ export const Contact = () => {
                 title="Contact Us"
                 desc="Schedule your appointment right away to get thorough information. We're here to assist you!"
                 mx="auto"
-                w="35%"
-                minH="30.37rem"
+                w={['90%', '35%']}
+                minH={['12.5rem', '30.37rem']}
                 bg="#EFE9FC"
             />
             <Flex
                 justify="space-between"
                 align="center"
-                w="80%"
+                w={['90%', '80%']}
                 mx="auto"
                 mt="5rem"
                 mb="7rem"
                 gap="4rem"
+                flexDir={['column', 'row']}
             >
                 <AnimationOnScroll animateIn="animate__fadeInLeft" duration={1}>
                     <ContactItem
@@ -33,7 +34,16 @@ export const Contact = () => {
                         desc={
                             'Get personalised technology solutions with our knowledgeable professionals. Please chat with us.'
                         }
-                        sub={'+234 818 004 1801 || +234 802 627 6484'}
+                        sub={[
+                            {
+                                num: '+234 818 004 1801 ||',
+                                url: 'tel:+2348180041801',
+                            },
+                            {
+                                num: '234 816 281 2758',
+                                url: 'tel:+2348162812758',
+                            },
+                        ]}
                     />
                 </AnimationOnScroll>
                 <AnimationOnScroll
@@ -46,7 +56,12 @@ export const Contact = () => {
                         desc={
                             'Do you have questions or want to book a consultation? We can help you through our email channel.'
                         }
-                        sub={'info@harmonicstechnology.com'}
+                        sub={[
+                            {
+                                num: 'info@harmonicstechnology.com',
+                                url: 'mailto:info@harmonicstechnology.com',
+                            },
+                        ]}
                     />
                 </AnimationOnScroll>
             </Flex>
@@ -54,10 +69,10 @@ export const Contact = () => {
                 sub="FREQUENTLY ASKED QUESTIONS"
                 title="Do you still have questions?"
                 mx="auto"
-                w="35%"
+                w={['90%', '35%']}
                 minH="13rem"
             />
-            <Box w="80%" mx="auto" mb="6rem">
+            <Box w={['90%', '80%']} mx="auto" mb="6rem">
                 <Accordion
                     defaultIndex={[0]}
                     // allowMultiple

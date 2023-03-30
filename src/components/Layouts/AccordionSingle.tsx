@@ -20,7 +20,7 @@ export const AccordionSingle = ({ title, content }) => {
                                     as="span"
                                     flex="1"
                                     textAlign="left"
-                                    fontSize="20px"
+                                    fontSize={['1rem', '20px']}
                                     lineHeight="30px"
                                     color="#252525"
                                     noOfLines={1}
@@ -37,7 +37,7 @@ export const AccordionSingle = ({ title, content }) => {
                         <AccordionPanel
                             pb={6}
                             textAlign="left"
-                            fontSize="20px"
+                            fontSize={['1rem', '20px']}
                             lineHeight="30px"
                             color="#252525"
                             w="95%"

@@ -12,18 +12,8 @@ export const Brands = () => {
                 title="We are humble and proud to work with amazing clients."
                 mx="auto"
                 minH="200px"
+                w={['90%', '45%']}
             />
-            {/* <HStack gap="2.9rem" spacing="0" justify="center">
-                <AnimationOnScroll animateIn="animate__fadeInUp" duration={1}>
-                    <BrandItem img="/assets/ts.png" />
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate__fadeInUp" duration={2}>
-                    <BrandItem img="/assets/pm.png" />
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate__fadeInUp" duration={3}>
-                    <BrandItem img="/assets/sme.png" />
-                </AnimationOnScroll>
-            </HStack> */}
             <Flex
                 gap={['1rem', '2.9rem']}
                 justify={['start', 'center']}

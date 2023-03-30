@@ -7,9 +7,15 @@ import { BsList } from 'react-icons/bs';
 
 const Header = () => {
     const router = useRouter();
-    const [openMenu, setOpenMenu] = useState(true);
+    const [openMenu, setOpenMenu] = useState(false);
     return (
-        <Box w="full" bgColor="white" h="6rem">
+        <Box
+            w="full"
+            bgColor="white"
+            h="6rem"
+            pos={['fixed', 'unset']}
+            zIndex="999"
+        >
             <Flex
                 w={['90%', '80%']}
                 mx="auto"
@@ -29,13 +35,12 @@ const Header = () => {
                     top="10%"
                     right={openMenu ? '0' : '-100%'}
                     p={['2rem 2rem', '0']}
-                    zIndex="999"
                     h={['100vh', 'auto']}
                     gap={['3rem', '0']}
                     transition=".5s all ease"
                 >
                     <Stack spacing="0" gap="4rem" direction={['column', 'row']}>
-                        <MenuItems text="home" url="/" />
+                        <MenuItems text="home" url="/home" />
                         <MenuItems text="our works" url="/our-works" />
                         <MenuItems text="services" url="/services" />
                         <MenuItems text="about us" url="/about" />
