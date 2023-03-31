@@ -33,10 +33,7 @@ export const Herobanner = () => {
                     top="0"
                     display={['none', 'block']}
                 >
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInDown"
-                        delay={100}
-                    >
+                    <AnimationOnScroll animateIn="animate__fadeInDown">
                         <Image src="/assets/squares.png" />
                     </AnimationOnScroll>
                 </Box>
@@ -120,10 +117,7 @@ export const Herobanner = () => {
                     </AnimationOnScroll>
                 </Box>
                 <Box w={['100%', '50%']} mt={['1rem', '3rem']}>
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        delay={100}
-                    >
+                    <AnimationOnScroll animateIn="animate__fadeInUp">
                         <Text
                             fontFamily="Nunito"
                             fontSize={['1rem', '24px']}

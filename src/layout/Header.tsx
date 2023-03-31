@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Icon, Image, Link, Stack } from '@chakra-ui/react';
+import { Box, Flex, Icon, Image, Link, Stack } from '@chakra-ui/react';
 import useClickOutside from '@components/HooksHelpers/useClickOutside';
 import { MenuItems } from '@components/Layouts/MenuItems';
 import { CustomButton } from '@components/Utilities/CustomButton';

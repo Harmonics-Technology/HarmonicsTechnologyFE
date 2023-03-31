@@ -1,4 +1,4 @@
-import { Box, HStack, Flex, Grid } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
 import { PageTop } from './PageTop';
 import { BrandItem } from '@components/Layouts/BrandItem';
