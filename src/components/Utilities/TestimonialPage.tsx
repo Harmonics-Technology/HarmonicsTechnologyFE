@@ -39,104 +39,102 @@ export const TestimonialPage = () => {
                 w={['90%', '45%']}
                 desc="Crafted with passion and precision, our work is a testament to our commitment to excellence."
             />
-            <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
-                <Box w={['90', '70%']} mx="auto">
-                    <Carousel
-                        showStatus={false}
-                        autoPlay
-                        infiniteLoop
-                        animationHandler="fade"
-                        showArrows={false}
-                        useKeyboardArrows
-                        renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                            hasPrev && (
-                                <Button
-                                    type="button"
-                                    onClick={onClickHandler}
-                                    title={label}
-                                    style={{ ...arrowStyles, left: 0 }}
-                                >
-                                    <BsChevronLeft />
-                                </Button>
-                            )
-                        }
-                        renderArrowNext={(onClickHandler, hasNext, label) =>
-                            hasNext && (
-                                <Button
-                                    type="button"
-                                    onClick={onClickHandler}
-                                    title={label}
-                                    style={{ ...arrowStyles, right: 0 }}
-                                >
-                                    <BsChevronRight />
-                                </Button>
-                            )
-                        }
-                        renderIndicator={(
-                            onClickHandler,
-                            isSelected,
-                            index,
-                            label,
-                        ) => {
-                            if (isSelected) {
-                                return (
-                                    <li
-                                        style={{
-                                            ...indicatorStyles,
-                                            background: '#A03CAE',
-                                            width: 40,
-                                        }}
-                                        aria-label={`Selected: ${label} ${
-                                            index + 1
-                                        }`}
-                                        title={`Selected: ${label} ${
-                                            index + 1
-                                        }`}
-                                    />
-                                );
-                            }
+            {/* <AnimationOnScroll animateIn="animate__fadeInUp"> */}
+            <Box w={['90', '70%']} mx="auto">
+                <Carousel
+                    showStatus={false}
+                    autoPlay
+                    infiniteLoop
+                    animationHandler="fade"
+                    showArrows={false}
+                    useKeyboardArrows
+                    renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                        hasPrev && (
+                            <Button
+                                type="button"
+                                onClick={onClickHandler}
+                                title={label}
+                                style={{ ...arrowStyles, left: 0 }}
+                            >
+                                <BsChevronLeft />
+                            </Button>
+                        )
+                    }
+                    renderArrowNext={(onClickHandler, hasNext, label) =>
+                        hasNext && (
+                            <Button
+                                type="button"
+                                onClick={onClickHandler}
+                                title={label}
+                                style={{ ...arrowStyles, right: 0 }}
+                            >
+                                <BsChevronRight />
+                            </Button>
+                        )
+                    }
+                    renderIndicator={(
+                        onClickHandler,
+                        isSelected,
+                        index,
+                        label,
+                    ) => {
+                        if (isSelected) {
                             return (
                                 <li
-                                    style={indicatorStyles}
-                                    onClick={onClickHandler}
-                                    onKeyDown={onClickHandler}
-                                    value={index}
-                                    key={index}
-                                    role="button"
-                                    tabIndex={0}
-                                    title={`${label} ${index + 1}`}
-                                    aria-label={`${label} ${index + 1}`}
+                                    style={{
+                                        ...indicatorStyles,
+                                        background: '#A03CAE',
+                                        width: 40,
+                                    }}
+                                    aria-label={`Selected: ${label} ${
+                                        index + 1
+                                    }`}
+                                    title={`Selected: ${label} ${index + 1}`}
                                 />
                             );
-                        }}
-                    >
-                        <TestimonialItem
-                            name="Doyin Adebayo"
-                            role="team lead, OCT Groups"
-                            content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboutb.jpg"
-                        />
-                        <TestimonialItem
-                            name="Doyin Adebayo"
-                            role="team lead, OCT Groups"
-                            content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboutc.jpg"
-                        />
-                        <TestimonialItem
-                            name="Doyin Adebayo"
-                            role="team lead, OCT Groups"
-                            content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboute.jpg"
-                        />
-                        <TestimonialItem
-                            name="Doyin Adebayo"
-                            role="team lead, OCT Groups"
-                            content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
-                            img="/assets/aboutd.jpg"
-                        />
-                    </Carousel>
-                </Box>
-            </AnimationOnScroll>
+                        }
+                        return (
+                            <li
+                                style={indicatorStyles}
+                                onClick={onClickHandler}
+                                onKeyDown={onClickHandler}
+                                value={index}
+                                key={index}
+                                role="button"
+                                tabIndex={0}
+                                title={`${label} ${index + 1}`}
+                                aria-label={`${label} ${index + 1}`}
+                            />
+                        );
+                    }}
+                >
+                    <TestimonialItem
+                        name="Doyin Adebayo"
+                        role="team lead, OCT Groups"
+                        content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
+                        img="/assets/aboutb.jpg"
+                    />
+                    <TestimonialItem
+                        name="Doyin Adebayo"
+                        role="team lead, OCT Groups"
+                        content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
+                        img="/assets/aboutc.jpg"
+                    />
+                    <TestimonialItem
+                        name="Doyin Adebayo"
+                        role="team lead, OCT Groups"
+                        content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
+                        img="/assets/aboute.jpg"
+                    />
+                    <TestimonialItem
+                        name="Doyin Adebayo"
+                        role="team lead, OCT Groups"
+                        content="Over the years I have had to struggle with growth in my business but with the help of Harmonic Technologies, my business has been able to grow. During the design period, they carried me along with all their progress so far by conducting weekly meetings where they provide me with updates on my design and we deliberate more on achieving my goal."
+                        img="/assets/aboutd.jpg"
+                    />
+                </Carousel>
+            </Box>
+            {/* </AnimationOnScroll> */}
         </Box>
     );
 };

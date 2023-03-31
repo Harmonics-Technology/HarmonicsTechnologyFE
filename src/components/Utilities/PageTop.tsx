@@ -54,7 +54,7 @@ export const PageTop = ({
                 mx={mx}
                 w={w}
             >
-                <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+                <AnimationOnScroll animateIn="animate__fadeInUp">
                     <Text
                         fontFamily={['BR Firma', 'General Sans']}
                         color="brand.100"
@@ -67,7 +67,7 @@ export const PageTop = ({
                         {sub}
                     </Text>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+                <AnimationOnScroll animateIn="animate__fadeInUp">
                     <Heading
                         fontFamily={['BR Firma', 'DM Sans']}
                         color={color}
@@ -80,7 +80,7 @@ export const PageTop = ({
                         {title}
                     </Heading>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+                <AnimationOnScroll animateIn="animate__fadeInUp">
                     <Text
                         fontFamily="DM Sans"
                         color={color}
@@ -93,10 +93,7 @@ export const PageTop = ({
                     </Text>
                 </AnimationOnScroll>
                 {btn && (
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        delay={100}
-                    >
+                    <AnimationOnScroll animateIn="animate__fadeInUp">
                         <Button
                             variant="outline"
                             borderColor="brand.100"
@@ -119,10 +116,7 @@ export const PageTop = ({
                     </AnimationOnScroll>
                 )}
                 {project && (
-                    <AnimationOnScroll
-                        animateIn="animate__fadeInUp"
-                        delay={100}
-                    >
+                    <AnimationOnScroll animateIn="animate__fadeInUp">
                         <Link passHref href={project}>
                             <HStack>
                                 <Box>

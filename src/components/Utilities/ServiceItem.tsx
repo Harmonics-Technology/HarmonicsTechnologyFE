@@ -43,7 +43,6 @@ export const ServiceItem = ({
                         ? 'animate__fadeInRight'
                         : 'animate__fadeInLeft'
                 }
-                delay={100}
             >
                 <Box
                     w={['90%', 'auto']}

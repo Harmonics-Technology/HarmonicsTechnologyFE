@@ -7,7 +7,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 export const HelpPage = () => {
     const router = useRouter();
     return (
-        <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+        <AnimationOnScroll animateIn="animate__fadeInUp">
             <Box
                 w="90%"
                 bg={[

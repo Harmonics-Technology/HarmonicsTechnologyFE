@@ -56,7 +56,7 @@ export const ProjectItem = ({ title, desc, project, cat, img }) => {
                     ))}
                 </HStack>
             </Flex>
-            <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+            <AnimationOnScroll animateIn="animate__fadeInUp">
                 <Box
                     w={['95%', 'full']}
                     h={['280px', '100vh']}
