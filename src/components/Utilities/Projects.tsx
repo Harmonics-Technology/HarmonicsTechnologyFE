@@ -1,11 +1,9 @@
-import { Box, Button } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { PageTop } from './PageTop';
 import { ProjectItem } from './ProjectItem';
-import { useRouter } from 'next/router';
 
 export const Projects = () => {
-    const router = useRouter();
     return (
         <Box w="full">
             <PageTop

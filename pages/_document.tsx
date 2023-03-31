@@ -44,9 +44,9 @@ class CustomDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
-                    <div id="globalLoader">
+                    {/* <div id="globalLoader">
                         <img src="/assets/splash.gif" alt="" />
-                    </div>
+                    </div> */}
                 </body>
             </Html>
         );

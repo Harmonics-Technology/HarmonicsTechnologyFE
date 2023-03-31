@@ -1,13 +1,4 @@
-import {
-    Box,
-    Flex,
-    Heading,
-    Image,
-    VStack,
-    Button,
-    Show,
-    Hide,
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, Image, VStack, Button } from '@chakra-ui/react';
 import { HelpTextItem } from '@components/Layouts/HelpTextItem';
 import { useRouter } from 'next/router';
 import React from 'react';

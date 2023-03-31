@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '@definitions/chakra/theme';
@@ -7,7 +7,6 @@ import { Hydrate } from 'react-query/hydration';
 import '../src/styles/global.css';
 import Layout from 'src/layout';
 import Head from 'next/head';
-import Cookies from 'js-cookie';
 import NextNProgress from 'nextjs-progressbar';
 
 function MyApp({

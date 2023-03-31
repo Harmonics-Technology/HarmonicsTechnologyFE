@@ -7,8 +7,6 @@ import {
     Image,
     Text,
     VStack,
-    Show,
-    Hide,
 } from '@chakra-ui/react';
 import { FooterHeadings } from '@components/Layouts/FooterHeadings';
 import { FooterMenuItems } from '@components/Layouts/FooterMenuItems';
