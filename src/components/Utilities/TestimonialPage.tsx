@@ -47,7 +47,8 @@ export const TestimonialPage = () => {
                     infiniteLoop
                     animationHandler="fade"
                     showArrows={false}
-                    useKeyboardArrows
+                    // useKeyboardArrows
+                    swipeable
                     renderArrowPrev={(onClickHandler, hasPrev, label) =>
                         hasPrev && (
                             <Button
