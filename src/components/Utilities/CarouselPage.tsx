@@ -33,6 +33,7 @@ export const CarouselPage = () => {
                     infiniteLoop
                     animationHandler="fade"
                     useKeyboardArrows
+                    swipeable
                     renderArrowPrev={(onClickHandler, hasPrev, label) =>
                         hasPrev && (
                             <Button
