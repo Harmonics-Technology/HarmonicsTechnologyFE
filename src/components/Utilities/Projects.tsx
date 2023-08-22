@@ -28,13 +28,13 @@ export const Projects = () => {
                 cat={['Mobile', 'Web', 'Development']}
                 img="/assets/98.jpg"
             />
-            <ProjectItem
+            {/* <ProjectItem
                 title="Liquede"
                 desc="We strive to provide the best possible experience for our customers, and we appreciate your trust and support."
                 project="https://liquede.com"
                 cat={['Mobile', 'Web', 'Development', 'Product Design']}
                 img="/assets/99.jpg"
-            />
+            /> */}
             {/* <Box w="fit-content" mx="auto" mt="-4rem">
                 <Button
                     variant="outline"
